@@ -1,11 +1,21 @@
-all:
-	g++ -O2 -pipe broff.cpp -o broff
+CC := g++
+CFLAGS := -Os -march=native -pipe -std=gnu++17 
 
-install:
-	cp broff /usr/local/bin/broff
+TARGET := broff
+INSTALL_DIR := /usr/local/bin
+
+.PHONY: all clean install uninstall
+
+all: $(TARGET)
+
+$(TARGET): broff.cpp
+	$(CC) $(CFLAGS) $^ -o $@
+
+install: $(TARGET)
+	cp $(TARGET) $(INSTALL_DIR)
 
 uninstall:
-	rm /usr/local/bin/broff
+	rm $(INSTALL_DIR)/$(TARGET)
 
 clean:
-	rm broff
+	rm $(TARGET)
