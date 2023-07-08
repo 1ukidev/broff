@@ -1,5 +1,5 @@
 CC := g++
-CFLAGS := -Os -march=native -pipe -std=gnu++17 
+CFLAGS := -Os -march=native -pipe -std=gnu++17 -Wall
 
 TARGET := broff
 INSTALL_DIR := /usr/local/bin
