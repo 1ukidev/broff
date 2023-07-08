@@ -8,7 +8,7 @@
 
 void printHelp() {
     std::cout << "Uso: broff [-h/--help] ARQUIVO_ENTRADA\n";
-    std::cout << "Implementação de uma linguagem de marcação simples. Utiliza o groff como back-end. (WIP)\n";
+    std::cout << "Implementação de uma linguagem de marcação simples. Utiliza o groff como back-end.\n";
     std::cout << "Mais informações em: https://github.com/1ukidev/broff\n\n";
     std::cout << "Opções:\n";
     std::cout << "  -h, --help       Exibe esta ajuda.\n";
