@@ -6,7 +6,9 @@
 #include <string>
 #include <unordered_map>
 
-void printHelp() {
+void
+printHelp()
+{
     std::cout << "Uso: broff [-h/--help] ARQUIVO_ENTRADA\n";
     std::cout << "Implementação de uma linguagem de marcação simples. Utiliza o groff como back-end.\n";
     std::cout << "Mais informações em: https://github.com/1ukidev/broff\n\n";
@@ -14,7 +16,9 @@ void printHelp() {
     std::cout << "  -h, --help       Exibe esta ajuda.\n";
 }
 
-int main(int argc, char* argv[]) {
+int
+main(int argc, char* argv[])
+{
     if (argc < 2) {
         std::cerr << "Erro: Nenhum arquivo de entrada fornecido.\n\n";
         printHelp();
